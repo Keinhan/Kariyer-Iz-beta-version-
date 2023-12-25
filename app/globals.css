@@ -1,0 +1,218 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  @keyframes slideL {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes slideR {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
+  }
+  .bg-1 {
+    background-image: url(../public/images/bg.jpeg);
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .bg-2 {
+    background-image: url(../public/images/heart.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .bg-3 {
+    background-image: url(../public/images/SG.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .bg-4 {
+    background-image: url(../public/images/bg3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .bg-5 {
+    background-image: url(../public/images/aoxafon.jpg);
+    background-size: 150vh;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .darkness {
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.7) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .gozleri {
+    color: #3ea8ff;
+  }
+
+  .slidesL {
+    display: inline-block;
+    animation: 40s slideL infinite linear;
+  }
+
+  .slidesR {
+    display: inline-block;
+    animation: 40s slideR infinite linear;
+  }
+
+  .slider:hover .slidesL {
+    animation-play-state: paused;
+  }
+
+  .slider:hover .slidesR {
+    animation-play-state: paused;
+  }
+
+  .card-center {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .card {
+    border-radius: 2rem;
+  }
+
+  .card:hover .card-svg svg {
+    color: white;
+    stroke: white;
+    border-radius: 1rem;
+  }
+
+  .card:hover div {
+    color: white;
+    stroke: white;
+  }
+  .photos {
+    aspect-ratio: 3/2;
+    object-fit: contain;
+  }
+
+  .card:hover div .card-div {
+    background-color: transparent;
+  }
+
+  .true-warrior {
+    margin-top: -21.8rem;
+  }
+
+  @media only screen and (max-width: 1545px) {
+    .true-warrior {
+      margin-top: -13.2rem;
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    .true-warrior {
+      margin-top: -2.8rem;
+    }
+  }
+
+  .Next {
+    display: none !important;
+  }
+
+  .button-6 {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #3ea8ff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
+      Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+
+  .button-6:hover,
+  .button-6:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .vip {
+    background-image: url(../public/images/vip.jpg);
+    background-size: cover;
+  }
+
+  .button-6:hover {
+    transform: translateY(-1px);
+  }
+
+  .button-6:active {
+    background-color: #f0f0f1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+  }
+
+  .Auth {
+    @apply w-[400px] border border-gray-200 py-2 px-6 bg-zinc-100/40;
+  }
+
+  h2 {
+    @apply text-2xl font-bold my-4;
+  }
+
+  p.content {
+    @apply leading-loose;
+  }
+
+  .link {
+    @apply text-[#7563DF] font-bold max-w-full overflow-hidden text-ellipsis;
+  }
+
+  .primary-btn {
+    @apply px-4 py-2 bg-slate-800 text-white rounded-md;
+  }
+
+  input,
+  textarea {
+    @apply px-4 py-2 border border-slate-300 rounded-md;
+  }
+
+  textarea {
+    @apply h-36;
+  }
+}
